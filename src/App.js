@@ -93,7 +93,7 @@ onInputChange = (event) => {
 
 onButtonSubmit = () => {
   // this.setState({imageUrl: this.state.input})
-  fetch(process.env.REACT_APP_PUBLIC_C9_IP + ':8080/imageurl',{
+  fetch('https://glacial-tor-70060.herokuapp.com/imageurl',{
     method: 'post',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
@@ -103,7 +103,7 @@ onButtonSubmit = () => {
   .then(response => response.json())
   .then(response => {
     if (response) {
-      fetch(process.env.REACT_APP_PUBLIC_C9_IP + ':8080/image',{
+      fetch('https://glacial-tor-70060.herokuapp.com/image',{
         method: 'put',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({

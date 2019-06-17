@@ -18,7 +18,7 @@ class Signin extends React.Component {
   }
   
   onSubmitSignIn = () => {
-    fetch(process.env.REACT_APP_PUBLIC_C9_IP + ':8080/signin', {
+    fetch('https://glacial-tor-70060.herokuapp.com/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

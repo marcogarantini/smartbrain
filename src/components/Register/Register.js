@@ -22,7 +22,7 @@ class Register extends React.Component {
     this.setState({password: event.target.value});
   }
   onSubmitSignIn = () => {
-    fetch(process.env.REACT_APP_PUBLIC_C9_IP + ':8080/register', {
+    fetch('https://glacial-tor-70060.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
